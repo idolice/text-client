@@ -1,4 +1,5 @@
 # Text Client Sample
+[![CircleCI](https://circleci.com/gh/idolice/text-client.svg?style=svg)](https://circleci.com/gh/idolice/text-client)
 
 This is a sample project that illustrates the way to create a simple api.ai
 client application.
