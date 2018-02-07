@@ -24,7 +24,7 @@ public class ChatController {
         MessageResponseDTO messageResponseDTO = new MessageResponseDTO();
         messageResponseDTO.setMessage(response.getResult().getFulfillment().getSpeech());
         messageResponseDTO.setIntent(response.getResult().getMetadata().getIntentName());
-        ResponseEntity<MessageResponseDTO> responseDTOHttpEntity = new ResponseEntity<>(messageResponseDTO, HttpStatus.OK);
+        ResponseEntity<MessageResponseDTO> responseDTOHttpEntity = new ResponseEntity<MessageResponseDTO>(messageResponseDTO, HttpStatus.OK);
         return responseDTOHttpEntity;
     }
 
