@@ -18,17 +18,19 @@
 				<plugin>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>1.4.3.RELEASE</version>
+					<configuration>
+						<classifier>spring-boot</classifier>
+						<mainClass>
+							ai.api.examples.TextClientApplication
+						</mainClass>
+						<includeSystemScope>true</includeSystemScope>
+					</configuration>
 					<executions>
 						<execution>
 							<goals>
 								<goal>repackage</goal>
 							</goals>
-							<configuration>
-								<classifier>spring-boot</classifier>
-								<mainClass>
-									ai.api.examples.TextClientApplication
-								</mainClass>
-							</configuration>
 						</execution>
 					</executions>
 				</plugin>
@@ -40,6 +42,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>1.5.9.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>ai.api</groupId>
+			<artifactId>libai-base</artifactId>
+			<version>1.6.12</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/lib/libai-jar-with-dependencies.jar</systemPath>
 		</dependency>
 	</dependencies>
 </project>
